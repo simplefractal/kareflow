@@ -8,7 +8,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'kareflow.views.home', name='home'),
     # url(r'^kareflow/', include('kareflow.foo.urls')),
-
+    url(r'^tasks/', include('task.urls')),
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
