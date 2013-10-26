@@ -16,7 +16,7 @@ EMAIL_PORT = 587
 
 EMAIL_USE_TLS = True
 
-INSTALLED_APPS = ('django.contrib.auth', 'django.contrib.contenttypes', 'django.contrib.sessions', 'django.contrib.sites', 'django.contrib.messages', 'django.contrib.staticfiles', 'django.contrib.admin', 'gunicorn', 'south', 'django_extensions', 'kareflow', 'emailer', 'provider', 'account')
+INSTALLED_APPS = ('django.contrib.auth', 'django.contrib.contenttypes', 'django.contrib.sessions', 'django.contrib.sites', 'django.contrib.messages', 'django.contrib.staticfiles', 'django.contrib.admin', 'gunicorn', 'south', 'django_extensions', 'kareflow', 'emailer', 'provider', 'account', 'patient')
 
 LANGUAGE_CODE = 'en-us'
 
