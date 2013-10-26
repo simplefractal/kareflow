@@ -6,3 +6,4 @@ gunicorn==18.0
 South==0.7.4
 django-extensions==0.7.1
 boto==2.2.2
+django-json-field==0.5.1
