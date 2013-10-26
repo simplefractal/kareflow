@@ -1,0 +1,585 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 1, ../sass/_general.scss */
+body {
+  font-family: "Lato", sans-serif;
+  background-image: url("../img/fabric_of_squares_gray.png");
+}
+
+/* line 5, ../sass/_general.scss */
+.container {
+  width: 90%;
+}
+
+/* line 9, ../sass/_general.scss */
+.main-wrapper, .expense-top-nav {
+  margin: 0 auto;
+}
+
+/* line 13, ../sass/_general.scss */
+.left-column {
+  width: 800px;
+  margin: 0 auto;
+}
+
+/* line 18, ../sass/_general.scss */
+.logo-title {
+  font-size: 28px;
+  padding-top: 15px;
+  padding-left: 5%;
+  font-family: "Playball", cursive;
+  color: #fff;
+  text-decoration: none;
+}
+/* line 25, ../sass/_general.scss */
+.logo-title:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* line 31, ../sass/_general.scss */
+.top-nav-wrapper {
+  background: #4572A7;
+  height: 50px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+/* line 38, ../sass/_general.scss */
+.badge-info {
+  background-color: #4572A7;
+}
+
+/* line 42, ../sass/_general.scss */
+.badge {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 46, ../sass/_general.scss */
+.financial-breakdown-info {
+  margin: 30px 0;
+}
+
+/* line 50, ../sass/_general.scss */
+.financial-breakdown-row {
+  padding: 5px;
+}
+
+/* line 54, ../sass/_general.scss */
+.dollar-amount {
+  text-align: right;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* line 61, ../sass/_general.scss */
+.breakdown-status {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+/* line 67, ../sass/_general.scss */
+.item-tag-el {
+  margin-right: 40px;
+}
+
+/* line 71, ../sass/_general.scss */
+.item-tag-wrapper {
+  margin-top: -4px;
+}
+
+/* line 75, ../sass/_general.scss */
+.item-tag {
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  border-radius: 18px;
+  border-color: #c0d2f2;
+  border-style: solid;
+  border-with: .96;
+  padding: 2px 7px 1px 7px;
+}
+
+/* line 85, ../sass/_general.scss */
+.item-amount {
+  width: 100px;
+  font-size: 18px;
+  font-weight: 500px;
+}
+
+/* line 91, ../sass/_general.scss */
+.item-amount-status {
+  line-height: 7px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+/* line 97, ../sass/_general.scss */
+.item-amount-number {
+  line-height: 12px;
+  text-align: right;
+  font-size: 16px;
+}
+
+/* line 103, ../sass/_general.scss */
+.item-note {
+  font-size: 17px;
+  font-weight: 500px;
+  color: #4572A7;
+  width: 400px;
+}
+
+/* line 111, ../sass/_general.scss */
+.user-thumbnail {
+  margin-top: -15px;
+  padding-right: 15px;
+}
+/* line 114, ../sass/_general.scss */
+.user-thumbnail img {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 119, ../sass/_general.scss */
+.receipt-thumbnail {
+  padding-right: 15px;
+}
+/* line 121, ../sass/_general.scss */
+.receipt-thumbnail img {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  margin-top: -15px;
+}
+
+/* line 127, ../sass/_general.scss */
+.tag-icon {
+  width: 30px;
+  height: 30px;
+  opacity: .1;
+}
+
+/* line 133, ../sass/_general.scss */
+.line-item {
+  padding: 35px 15px 55px 15px;
+  margin: 0;
+}
+/* line 136, ../sass/_general.scss */
+.line-item li {
+  display: inline-block;
+}
+/* line 139, ../sass/_general.scss */
+.line-item:hover {
+  background-color: #FEFEF5;
+}
+/* line 143, ../sass/_general.scss */
+.line-item.selected {
+  background-color: #FCFCEB;
+}
+
+/* line 148, ../sass/_general.scss */
+.left {
+  float: left;
+}
+
+/* line 152, ../sass/_general.scss */
+.right {
+  float: right;
+}
+
+/* line 156, ../sass/_general.scss */
+.item-date {
+  font-size: 16px;
+  color: #bbb;
+  width: 26px;
+  margin-right: 26px;
+  text-align: center;
+}
+
+/* line 164, ../sass/_general.scss */
+.item-date-month {
+  color: #959595;
+  font-weight: 800;
+  line-height: 5px;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+/* line 172, ../sass/_general.scss */
+.item-date-day {
+  color: #959595;
+  line-height: 7px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* line 179, ../sass/_general.scss */
+.status-Pending {
+  color: rgba(191, 54, 4, 0.5);
+}
+
+/* line 183, ../sass/_general.scss */
+.status-Reimbursed {
+  color: #5bb75b;
+}
+
+/* line 187, ../sass/_general.scss */
+.status-Approved {
+  color: #5bb75b;
+}
+
+/* line 191, ../sass/_general.scss */
+.status-Rejected {
+  color: #bf3604;
+}
+
+/* line 195, ../sass/_general.scss */
+.hidden {
+  display: none !important;
+}
+
+/* line 199, ../sass/_general.scss */
+.center {
+  text-align: center;
+}
+
+/* line 203, ../sass/_general.scss */
+.expense-header {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+/* line 208, ../sass/_general.scss */
+.expense-header-text {
+  margin-top: 10px;
+}
+
+/* line 212, ../sass/_general.scss */
+.expense-wrapper {
+  margin-bottom: 60px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+}
+
+/* line 218, ../sass/_general.scss */
+.expense-details {
+  list-style: none;
+  margin: 0;
+}
+/* line 221, ../sass/_general.scss */
+.expense-details li {
+  margin: 10px 0;
+}
+
+/* line 226, ../sass/_general.scss */
+#fancybox-outer {
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+/* line 234, ../sass/_general.scss */
+.receipt-wrapper {
+  background-color: #ddd;
+}
+
+/* line 238, ../sass/_general.scss */
+.sidebar-wrapper {
+  background-color: #fff;
+  border: 1px solid #dddddd;
+  height: 100%;
+  text-align: center;
+  padding: 30px 20px;
+  position: fixed;
+}
+
+/* line 247, ../sass/_general.scss */
+.add-button {
+  padding: 6px;
+}
+
+/* line 251, ../sass/_general.scss */
+#id_receipt {
+  height: 18px;
+  line-height: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 258, ../sass/_general.scss */
+.detail-date {
+  color: #aaa;
+}
+
+/* line 262, ../sass/_general.scss */
+.detail-note {
+  font-size: 30px;
+  line-height: 30px;
+  word-wrap: break-word;
+}
+
+/* line 268, ../sass/_general.scss */
+.detail-amount {
+  font-weight: 300;
+  font-size: 36px;
+  padding: 10px;
+}
+
+/* line 274, ../sass/_general.scss */
+.detail-status {
+  font-size: 20px;
+  color: #999;
+  margin-bottom: 30px;
+}
+
+/* line 280, ../sass/_general.scss */
+iframe.zoom {
+  -moz-transform: scale(0.25, 0.25);
+  -webkit-transform: scale(0.25, 0.25);
+  -o-transform: scale(0.25, 0.25);
+  -ms-transform: scale(0.25, 0.25);
+  transform: scale(0.25, 0.25);
+  -moz-transform-origin: top left;
+  -webkit-transform-origin: top left;
+  -o-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+}
+
+/* line 293, ../sass/_general.scss */
+.receipt {
+  max-height: 400px;
+}
+
+/* line 297, ../sass/_general.scss */
+.admin-action-wrapper {
+  margin-top: 20px;
+}
+
+/* line 301, ../sass/_general.scss */
+.admin-action-button {
+  display: inline;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  width: 300px;
+  padding: 5px 30px;
+  margin: 0 20px;
+}
+
+/* line 310, ../sass/_general.scss */
+.graph-wrapper {
+  margin-top: 25px;
+}
+
+/* line 314, ../sass/_general.scss */
+.line-item-divider {
+  margin: 0;
+}
+
+/* line 319, ../sass/_general.scss */
+.login-wrapper {
+  width: 362px;
+  margin: 0 auto;
+  margin-top: 10%;
+  padding: 20px;
+  text-align: center;
+}
+/* line 326, ../sass/_general.scss */
+.login-wrapper .input-field > input {
+  margin-bottom: 30px;
+  font-size: 24px;
+  line-height: 24px;
+  height: 30px;
+  padding: 10px;
+  width: 300px;
+}
+
+/* line 337, ../sass/_general.scss */
+.login-logo {
+  font-size: 66px;
+  font-family: "Playball", cursive;
+  color: #ffa040;
+  line-height: 80px;
+  margin: 0 0 15px -6px;
+}
+
+/* line 345, ../sass/_general.scss */
+.login-button-wrapper {
+  text-align: right;
+}
+/* line 348, ../sass/_general.scss */
+.login-button-wrapper .login-button {
+  margin-right: 20px;
+  width: 120px;
+  height: 52px;
+  font-size: 24px;
+}
+
+/* line 356, ../sass/_general.scss */
+.logout-wrapper {
+  padding-top: 14px;
+  padding-right: 5%;
+  font-size: 18px;
+}
+/* line 360, ../sass/_general.scss */
+.logout-wrapper > a {
+  color: #fff;
+}
+
+/* line 365, ../sass/_general.scss */
+.range-switcher {
+  width: 338px;
+}
+/* line 367, ../sass/_general.scss */
+.range-switcher td {
+  -webkit-transition: background-color 0.1s ease-in-out;
+  -moz-transition: background-color 0.1s ease-in-out;
+  -ms-transition: background-color 0.1s ease-in-out;
+  -o-transition: background-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out;
+  border-bottom: 1px solid #bcbcbc !important;
+  border-left: 1px solid #bcbcbc;
+  border-top: 1px solid #bcbcbc;
+  color: #737373;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 3px;
+  text-align: center;
+  text-transform: capitalize;
+  width: 33%;
+}
+/* line 386, ../sass/_general.scss */
+.range-switcher td.active {
+  color: #444;
+  background-color: #F6F6F6;
+}
+/* line 390, ../sass/_general.scss */
+.range-switcher td:hover {
+  background-color: #F3F3F3;
+}
+/* line 394, ../sass/_general.scss */
+.range-switcher td:last-child {
+  border-right: 1px solid #bcbcbc;
+}
+
+/* line 401, ../sass/_general.scss */
+.graph, .financial-breakdown-info {
+  display: none;
+}
+
+/* line 405, ../sass/_general.scss */
+.form-search {
+  margin-left: 100px;
+}
+/* line 407, ../sass/_general.scss */
+.form-search > input {
+  width: 250px;
+  margin-top: 9px;
+}
+
+/* line 413, ../sass/_general.scss */
+.filter-wrapper {
+  padding: 20px 10px;
+  background-color: #F8F8F8;
+  border-top: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+}
+
+/* line 421, ../sass/_general.scss */
+a.pill {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  padding: 5px 12px;
+  border: 1px solid #cccccc;
+  margin: 0 2px;
+  text-decoration: none;
+  color: #999;
+  font-size: 12px;
+}
+
+/* line 431, ../sass/_general.scss */
+a.pActive {
+  border-color: #ADCCF7;
+  color: #4884F7;
+  background-color: #E9F4FA;
+  text-shadow: 0 1px 0 white;
+}
+
+/* line 438, ../sass/_general.scss */
+hr {
+  margin: 10px 0;
+}
+
+/* line 442, ../sass/_general.scss */
+a.send-report {
+  margin-left: 130px;
+}
+
+/* line 446, ../sass/_general.scss */
+.admin-actions {
+  font-size: 28px;
+  text-decoration: none;
+}
+/* line 450, ../sass/_general.scss */
+.admin-actions a.cross-mark {
+  color: red;
+  margin: 0 10px;
+}
+/* line 455, ../sass/_general.scss */
+.admin-actions a.check-mark {
+  color: green;
+}
+
+/* line 1, ../sass/_fancy.scss */
+.fancybox-inner {
+  background-image: url("../img/billie_holiday.png");
+}
+
+/* line 5, ../sass/_fancy.scss */
+.fancy-body {
+  width: 900px;
+  height: 700px;
+}
+
+/* line 10, ../sass/_fancy.scss */
+.fancy-header {
+  margin: 16px 0;
+}
+
+/* line 14, ../sass/_fancy.scss */
+.fancy-content-wrapper {
+  padding: 0 20px;
+}
+
+/* line 18, ../sass/_fancy.scss */
+.fancy-description {
+  border-bottom: 1px dashed #d7d7d7;
+  padding-bottom: 10px;
+  line-height: 1.8em;
+}

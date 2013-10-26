@@ -8,7 +8,10 @@ class TaskList(TemplateView):
 
     def get_context_data(self, *args, **kwargs):
         return {
-            "tasks": Task.objects.all().order_by("deadline")
+            "tasks": sorted(
+                list(
+                    Task.objects.all()),
+                key=lambda task: task.action_deadline)
         }
 
 task_list = TaskList.as_view()

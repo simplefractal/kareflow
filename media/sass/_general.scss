@@ -1,0 +1,458 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-image: url('../img/fabric_of_squares_gray.png');
+}
+.container {
+   width: 90%;
+}
+
+.main-wrapper, .expense-top-nav {
+    margin: 0 auto;
+}
+
+.left-column {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.logo-title {
+    font-size: 28px;
+    padding-top: 15px;
+    padding-left: 5%;
+    font-family: "Playball", cursive;
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+        text-decoration:none;
+        color: #fff;
+    }
+}
+
+.top-nav-wrapper{
+    background: #4572A7;
+    height: 50px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.badge-info {
+    background-color: #4572A7;
+}
+
+.badge {
+    @include border-radius(0);
+}
+
+.financial-breakdown-info {
+   margin: 30px 0;
+}
+
+.financial-breakdown-row {
+    padding: 5px;
+}
+
+.dollar-amount {
+    text-align: right;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.breakdown-status {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.item-tag-el {
+   margin-right: 40px;
+}
+
+.item-tag-wrapper {
+   margin-top: -4px;
+}
+
+.item-tag {
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;
+    border-color: rgb(192, 210, 242);
+    border-style: solid;
+    border-with: .96;
+    padding: 2px 7px 1px 7px;
+}
+
+.item-amount {
+    width: 100px;
+    font-size: 18px;
+    font-weight: 500px;
+}
+
+.item-amount-status {
+    line-height: 7px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.item-amount-number {
+    line-height: 12px;
+    text-align: right;
+    font-size: 16px;
+}
+
+.item-note {
+    font-size: 17px;
+    font-weight: 500px;
+    color: #4572A7;
+    width: 400px;
+}
+
+
+.user-thumbnail {
+    margin-top: -15px;
+    padding-right: 15px;
+    img {
+        @include border-radius(4px);
+    }
+}
+
+.receipt-thumbnail {
+    padding-right: 15px;
+    img {
+        @include border-radius(4px);
+        margin-top: -15px;
+    }
+}
+
+.tag-icon {
+    width: 30px;
+    height: 30px;
+    opacity: .1;
+}
+
+.line-item {
+    padding: 35px 15px 55px 15px;
+    margin: 0;
+    & li {
+        display: inline-block;
+    }
+    &:hover {
+        background-color: #FEFEF5;
+    }
+
+    &.selected {
+        background-color: #FCFCEB;
+    }
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.item-date {
+    font-size: 16px;
+    color: #bbb;
+    width: 26px;
+    margin-right: 26px;
+    text-align: center;
+}
+
+.item-date-month {
+    color: #959595;
+    font-weight: 800;
+    line-height: 5px;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.item-date-day {
+    color: #959595;
+    line-height: 7px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.status-Pending {
+    color: rgba(191, 54, 4, 0.5)
+}
+
+.status-Reimbursed {
+    color: #5bb75b;
+}
+
+.status-Approved {
+    color: #5bb75b;
+}
+
+.status-Rejected {
+    color: #bf3604;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.center {
+    text-align: center;
+}
+
+.expense-header {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.expense-header-text {
+    margin-top: 10px;
+}
+
+.expense-wrapper {
+    margin-bottom: 60px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+}
+
+.expense-details {
+    list-style: none;
+    margin: 0;
+    & li {
+        margin: 10px 0;
+    }
+}
+
+#fancybox-outer {
+    @include border-radius(11px);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.receipt-wrapper {
+    background-color: #ddd;
+}
+
+.sidebar-wrapper {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    height: 100%;
+    text-align: center;
+    padding: 30px 20px;
+    position: fixed;
+}
+
+.add-button {
+    padding: 6px;
+}
+
+#id_receipt {
+    height: 18px;
+    line-height: 18px;
+    padding: 0;
+    margin: 0;
+}
+
+.detail-date {
+    color: #aaa;
+}
+
+.detail-note {
+    font-size: 30px;
+    line-height: 30px;
+    word-wrap:break-word;
+}
+
+.detail-amount {
+    font-weight: 300;
+    font-size: 36px;
+    padding: 10px;
+}
+
+.detail-status {
+    font-size: 20px;
+    color: #999;
+    margin-bottom: 30px;
+}
+
+iframe.zoom {
+    -moz-transform: scale(0.25, 0.25);
+    -webkit-transform: scale(0.25, 0.25);
+    -o-transform: scale(0.25, 0.25);
+    -ms-transform: scale(0.25, 0.25);
+    transform: scale(0.25, 0.25);
+    -moz-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -o-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+}
+
+.receipt {
+    max-height:400px;
+}
+
+.admin-action-wrapper {
+    margin-top: 20px;
+}
+
+.admin-action-button {
+    display: inline;
+    @include border-radius(0);
+    width: 300px;
+    padding: 5px 30px;
+    margin: 0 20px;
+
+}
+
+.graph-wrapper {
+    margin-top: 25px;
+}
+
+.line-item-divider {
+    margin: 0;
+
+}
+
+.login-wrapper {
+    width: 362px;
+    margin: 0 auto;
+    margin-top: 10%;
+    padding: 20px;
+    text-align: center;
+
+    .input-field > input {
+        margin-bottom: 30px;
+        font-size: 24px;
+        line-height: 24px;
+        height: 30px;
+        padding: 10px;
+        width: 300px;
+    }
+}
+
+
+.login-logo {
+   font-size: 66px;
+   font-family: "Playball", cursive;
+   color: #ffa040;
+   line-height: 80px;
+   margin: 0 0 15px -6px;
+}
+
+.login-button-wrapper {
+    text-align: right;
+
+    .login-button {
+        margin-right: 20px;
+        width: 120px;
+        height: 52px;
+        font-size: 24px;
+    }
+}
+
+.logout-wrapper {
+    padding-top: 14px;
+    padding-right: 5%;
+    font-size: 18px;
+    > a {
+        color: #fff;
+    }
+}
+
+.range-switcher {
+    width: 338px;
+    & td {
+        -webkit-transition: background-color 0.1s ease-in-out;
+        -moz-transition: background-color 0.1s ease-in-out;
+        -ms-transition: background-color 0.1s ease-in-out;
+        -o-transition: background-color 0.1s ease-in-out;
+        transition: background-color 0.1s ease-in-out;
+        border-bottom: 1px solid #BCBCBC !important;
+        border-left: 1px solid #BCBCBC;
+        border-top: 1px solid #BCBCBC;
+        color: #737373;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 20px;
+        padding: 3px;
+        text-align: center;
+        text-transform: capitalize;
+        width: 33%;
+
+        &.active {
+            color: #444;
+            background-color: #F6F6F6;
+        }
+        &:hover {
+            background-color: #F3F3F3;
+        }
+
+        &:last-child {
+            border-right: 1px solid #BCBCBC;
+        }
+
+    }
+}
+
+.graph, .financial-breakdown-info {
+    display: none;
+}
+
+.form-search {
+    margin-left: 100px;
+    > input {
+        width: 250px;
+        margin-top: 9px;
+    }
+}
+
+.filter-wrapper {
+    padding: 20px 10px;
+    background-color: #F8F8F8;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+a.pill {
+    @include border-radius(20px);
+    padding: 5px 12px;
+    border: 1px solid #CCC;
+    margin: 0 2px;
+    text-decoration: none;
+    color: #999;
+    font-size: 12px;
+}
+
+a.pActive {
+    border-color: #ADCCF7;
+    color: #4884F7;
+    background-color: #E9F4FA;
+    text-shadow: 0 1px 0 white;
+}
+
+hr {
+    margin: 10px 0;
+}
+
+a.send-report {
+    margin-left: 130px;
+}
+
+.admin-actions {
+    font-size: 28px;
+    text-decoration: none;
+
+    a.cross-mark {
+        color: red;
+        margin: 0 10px;
+    }
+
+    a.check-mark {
+        color: green;
+    }
+}
