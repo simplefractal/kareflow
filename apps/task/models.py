@@ -30,6 +30,26 @@ class Task(models.Model):
     marked_complete_by = models.ForeignKey("account.Account", blank=True, null=True)
     last_modified = models.DateTimeField(auto_now=True)
 
+    @property
+    def is_call(self):
+        return self.action == 1
+
+    @property
+    def is_schedule(self):
+        return self.action == 2
+
+    @property
+    def is_visit(self):
+        return self.action == 3
+
+    @property
+    def display_text(self):
+        if self.is_call:
+            return "Call {} by {}".format(self.patient.name, self.deadline)
+        else:
+            return "Schedule visit for {} by {}".format(
+                self.patient.name, self.deadline)
+
     def save(self, *args, **kwargs):
         """
         Ensure unique uuid

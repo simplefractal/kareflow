@@ -67,11 +67,14 @@
         </div><!--/.nav-collapse -->
       </div>
       <div>
-        <ul>
-        {% for task in tasks %}
-          <li>{{ task }}</li>
-        {% endfor %}
-        </ul>
-    </div> <!-- /container -->
+<table class="table table-hover">
+        <tbody>
+          {% for task in tasks %}
+          <tr>
+            <td>{{ task.display_text }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>    </div> <!-- /container -->
   </body>
 </html>
