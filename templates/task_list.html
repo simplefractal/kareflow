@@ -33,7 +33,7 @@
           {% for task in tasks %}
           <ul class="line-item">
             <li class="left user-thumbnail">
-              <img style="opacity:.7" src="{{ MEDIA_URL }}img/{% if task.is_call %}call{% elif task.is_schedule %}schedule{% endif %}.png" width="50" height="50"/>
+              <img style="opacity:.7" src="{{ MEDIA_URL }}img/{% if task.is_call %}call{% elif task.is_schedule %}schedule{% endif %}.png" width="20" height="20"/>
             </li>
             <li class="left item-note">
               {{ task.display_text }}
@@ -48,7 +48,7 @@
             </li>
 
             <li class="right">
-              <span class="{% if task.is_urgent %}status-Rejected{% else %}status-Pending{% endif %}">{{ task.action_deadline_text }}</span>
+              <span class="{% if task.is_urgent %}status-Rejected{% endif %}">{{ task.action_deadline_text }}</span>
             </li>
 
           </ul>
