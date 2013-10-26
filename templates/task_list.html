@@ -26,8 +26,8 @@
       <div class="row main-wrapper">
         <div class="left-column">
           <div class="filter-wrapper" id="filter-bar">
-            <a href="#" id="filter-all" class="pActive pill" data-filter="all">To Do</a>
-            <a href="#" id="filter-mine" class="pill" data-filter="mine">Completed</a>
+            <a href="{% url 'task_list' %}" id="filter-all" class="{% if active_filter == 'open' %}pActive{% endif %} pill" data-filter="all">To Do</a>
+            <a href="{% url 'task_list' %}?completed=true" id="filter-mine" class="{% if active_filter == 'completed' %}pActive{% endif %} pill" data-filter="mine">Completed</a>
           </div>
           <div id="expense-list" class="expense-wrapper">
           {% for task in tasks %}
@@ -41,6 +41,10 @@
             <li class="right item-amount-status">
               <span class="{% if task.is_urgent %}status-Rejected{% else %}status-Pending{% endif %}">{{ task.action_deadline_text }}</span>
             </li>
+          </ul>
+          {% empty %}
+          <ul class="line-item">
+            No {{ active_filter }} tasks at this time.
           </ul>
           {% endfor %}
           </div>

@@ -7,6 +7,8 @@ from django.contrib.humanize.templatetags.humanize import naturaltime
 from django.db import models
 from util.randz import make_8_key
 
+from .managers import TaskManager
+
 
 ACTION_CHOICES = (
     (1, "Call patient"),
@@ -32,6 +34,8 @@ class Task(models.Model):
     status = models.PositiveSmallIntegerField(choices=TASK_STATUSES, default=1)
     marked_complete_by = models.ForeignKey("account.Account", blank=True, null=True)
     last_modified = models.DateTimeField(auto_now=True)
+
+    objects = TaskManager()
 
     def __unicode__(self):
         return "{}: {}".format(self.patient.name, self.action)
