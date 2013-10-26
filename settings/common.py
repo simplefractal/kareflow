@@ -24,7 +24,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
-    'gunicorn'
+    'gunicorn',
     'south',
     'django_extensions',
     'kareflow',
