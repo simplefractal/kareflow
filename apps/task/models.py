@@ -20,14 +20,14 @@ TASK_STATUSES = (
 
 class Task(models.Model):
     uuid = models.CharField(blank=True, unique=True, max_length=50)
-    patient = models.ForeignKeyField("patient.Patient")
+    patient = models.ForeignKey("patient.Patient")
     action = models.PositiveSmallIntegerField(choices=ACTION_CHOICES, default=1)
     deadline = models.DateTimeField()
-    date_completed = models.DateTimeField()
+    date_completed = models.DateTimeField(null=True, blank=True)
     date_added = models.DateTimeField(auto_now_add=True)
     providers = models.ManyToManyField("provider.Provider")
     status = models.PositiveSmallIntegerField(choices=TASK_STATUSES, default=1)
-    marked_complete_by = models.ForeignKeyField("account.Account", blank=True, null=True)
+    marked_complete_by = models.ForeignKey("account.Account", blank=True, null=True)
     last_modified = models.DateTimeField(auto_now=True)
 
     def save(self, *args, **kwargs):

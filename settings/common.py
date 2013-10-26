@@ -18,7 +18,7 @@ EMAIL_USE_TLS = True
 
 INSTALLED_APPS = (
     'django.contrib.auth',
-    'django.contrib.contenttypes'
+    'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
