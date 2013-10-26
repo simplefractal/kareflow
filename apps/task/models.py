@@ -41,6 +41,14 @@ class Task(models.Model):
         return "{}: {}".format(self.patient.name, self.action)
 
     @property
+    def is_open(self):
+        return self.status == 1
+
+    @property
+    def is_complete(self):
+        return self.status == 10
+
+    @property
     def is_call(self):
         return self.action == 1
 
@@ -102,6 +110,14 @@ class Task(models.Model):
             self.action_deadline.minute)
         return ((action_deadline - datetime.datetime.now())
                 .total_seconds() < 60 * 60 * 24)
+
+    def mark_complete(self):
+        self.status = 10
+        self.save()
+
+    def mark_open(self):
+        self.status = 1
+        self.save()
 
     def save(self, *args, **kwargs):
         """

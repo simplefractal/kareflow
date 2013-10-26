@@ -543,17 +543,18 @@ a.send-report {
 
 /* line 446, ../sass/_general.scss */
 .admin-actions {
+  margin-left: 15px;
   font-size: 28px;
   text-decoration: none;
 }
-/* line 450, ../sass/_general.scss */
+/* line 451, ../sass/_general.scss */
 .admin-actions a.cross-mark {
   color: red;
   margin: 0 10px;
 }
-/* line 455, ../sass/_general.scss */
+/* line 456, ../sass/_general.scss */
 .admin-actions a.check-mark {
-  color: green;
+  color: #B0B0B0;
 }
 
 /* line 1, ../sass/_fancy.scss */

@@ -1,4 +1,7 @@
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, View
+from django.shortcuts import get_object_or_404
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
 
 from .models import Task
 
@@ -21,4 +24,21 @@ class TaskList(TemplateView):
                 key=lambda task: task.action_deadline)
         }
 
+
+class MarkComplete(View):
+    def get(self, request, task_uuid):
+        task = get_object_or_404(Task, uuid=task_uuid)
+        task.mark_complete()
+        return HttpResponseRedirect(reverse('task_list'))
+
+
+class MarkOpen(View):
+    def get(self, request, task_uuid):
+        task = get_object_or_404(Task, uuid=task_uuid)
+        task.mark_open()
+        return HttpResponseRedirect(reverse('task_list'))
+
+
 task_list = TaskList.as_view()
+mark_complete = MarkComplete.as_view()
+mark_open = MarkOpen.as_view()

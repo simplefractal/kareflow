@@ -38,9 +38,19 @@
             <li class="left item-note">
               {{ task.display_text }}
             </li>
-            <li class="right item-amount-status">
+
+            <li class="admin-actions right">
+              {% if task.is_open %}
+              <a class="check-mark" href="{% url 'mark_complete' task.uuid %}">✔</a>
+              {% else %}
+              <a href="{% url 'mark_open' task.uuid %}">Reopen</a>
+              {% endif %}
+            </li>
+
+            <li class="right">
               <span class="{% if task.is_urgent %}status-Rejected{% else %}status-Pending{% endif %}">{{ task.action_deadline_text }}</span>
             </li>
+
           </ul>
           {% empty %}
           <ul class="line-item">
