@@ -31,6 +31,7 @@ INSTALLED_APPS = (
     'emailer',
     'provider',
     'account',
+    'task',
     'patient',
     'discharge')
 
